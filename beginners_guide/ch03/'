@@ -1,0 +1,19 @@
+class Period {
+    public static void main(String args[])
+        throws java.io.IOException {
+
+
+        char input;
+        int counter = 0;
+
+        while(input != '.') {
+            input = (char) System.in.read();
+            if(input  == ' ') counter++;
+            if(input == '.') {
+                System.out.print("Correct! Spaces counted: %2d", counter);
+                break;
+            }
+        }
+    }
+}
+

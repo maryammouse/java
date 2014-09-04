@@ -1,0 +1,81 @@
+Chapter 2 Self Test
+
+1. Why does Java strictly specify the range and behavior of its primitive types?
+
+For safety/security's sake.
+
+2. What is Java’s character type, and how does it differ from the character type used by some other programming languages?
+
+char, and some mathematical operators can be legally applied to it, unlike in some other languages.
+
+3. A boolean value can have any value you like because any non-zero value is true. True or False?
+
+False. A boolean can only have the values True and False.
+
+4. Given this output,
+
+One 
+Two 
+Three
+
+using a single string, show the println( ) statement that produced it.
+
+println(One \n Two \n Three);
+
+5. What is wrong with this fragment?
+
+    for(i = 0; i < 10; i++) {
+        int sum;
+        sum = sum + i; 
+    }
+    System.out.println("Sum is: " + sum);
+
+The problem is that sum is not initialized before we use it recursively in the line
+sum = sum + i;
+
+6. Explain the difference between the prefix and postfix forms of the increment operator.
+
+The difference is in when the incrementation is applied 
+(before means it will find the operand before applying the whole number
+to the rest of the expression, and after means after).
+
+7. Show how a short-circuit AND can be used to prevent a divide-by-zero error.
+
+if (3>10 && 3/0 = 3)...
+
+In this case, the second part of the if statement will not run and produce an error
+since the first part is already false.
+
+8. In an expression, what type are byte and short promoted to? 
+
+They are promoted to long.
+
+9. In general, when is a cast needed?
+
+When making narrowing conversions.
+
+10. Write a program that finds all of the prime numbers between 2 and 100.
+
+int i;
+
+for(i=2, i < 100, i++) {
+    bool isprime;
+    isprime = True;
+
+    int j;
+
+    for(j=2, j < i, j++) {
+        if((i%j) == 0) isprime = False;
+    }
+    if(isprime)
+        System.out.println(i + "is prime.")
+}
+
+
+11. Does the use of redundant parentheses affect program performance?
+
+Nope!
+
+12. Does a block define a scope?
+
+Nope, curly-brackets do.
